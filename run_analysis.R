@@ -2,9 +2,11 @@ library(dplyr)
 
 assignment <- function() {
         d <- runAnalysis()
-        t <- tinyset( d )
+        t <- tidyset( d )
         
-        list(first_set=d,second_set=t)
+        l <- list(first_set=d,second_set=t)
+        
+        l
 }
 
 runAnalysis <- function() {
