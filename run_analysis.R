@@ -37,7 +37,7 @@ runAnalysis <- function() {
         names(x_test) <- make.names( features$feature_name, unique=TRUE )
         x_test <- x_test %>%
                   mutate( subject = subject_test$V1,
-                  activity_id = y_test$V1 ) %>%
+                          activity_id = y_test$V1 ) %>%
                   left_join( activities ) %>%
                   select( subject, activity_name, contains("mean"), contains("std") )
         
