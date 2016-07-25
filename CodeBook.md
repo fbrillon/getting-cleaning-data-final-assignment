@@ -1,5 +1,5 @@
 # Code Book - Getting and Cleaning Data
-## By Francois Brillon
+* By Francois Brillon
 
 # Initial Data used for this project 
 * https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
@@ -10,7 +10,7 @@
 # Methodology
 * Download and unzip original data set
 * Read activities and features description data sets
-** Each activity and feature has a numeric ID and a name
+  * Each activity and feature has a numeric ID and a name
 * Read X_test.txt data set, which contains all observations and measurements
 * Use the features descriptions to label columns in X_test data set
 * Read subject_test.txt data set which contains the id of the subject who performed each action, corresponding to an observation
@@ -26,24 +26,24 @@
 
 ## Measurements 
 * There are 2 groups of measurements
-** mean = mean
-** std = standard deviation
+  * mean = mean
+  * std = standard deviation
 * The measurements are as follows
 * '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-** tBodyAcc-XYZ
-** tGravityAcc-XYZ
-** tBodyAccJerk-XYZ
-** tBodyGyro-XYZ
-** tBodyGyroJerk-XYZ
-** tBodyAccMag
-** tGravityAccMag
-** tBodyAccJerkMag
-** tBodyGyroMag
-** tBodyGyroJerkMag
-** fBodyAcc-XYZ
-** fBodyAccJerk-XYZ
-** fBodyGyro-XYZ
-** fBodyAccMag
-** fBodyAccJerkMag
-** fBodyGyroMag
-** fBodyGyroJerkMag
+  * tBodyAcc-XYZ
+  * tGravityAcc-XYZ
+  * tBodyAccJerk-XYZ
+  * tBodyGyro-XYZ
+  * tBodyGyroJerk-XYZ
+  * tBodyAccMag
+  * tGravityAccMag
+  * tBodyAccJerkMag
+  * tBodyGyroMag
+  * tBodyGyroJerkMag
+  * fBodyAcc-XYZ
+  * fBodyAccJerk-XYZ
+  * fBodyGyro-XYZ
+  * fBodyAccMag
+  * fBodyAccJerkMag
+  * fBodyGyroMag
+  * fBodyGyroJerkMag
