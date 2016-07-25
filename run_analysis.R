@@ -1,5 +1,10 @@
 library(dplyr)
 
+set_working_directory <- function() {
+        wd <- "~/Documents/coursera/getting-and-cleaning-data/week4/"
+        setwd(wd)
+}
+
 assignment <- function() {
         d <- runAnalysis()
         t <- tidyset( d )
@@ -10,9 +15,6 @@ assignment <- function() {
 }
 
 runAnalysis <- function() {
-        wd <- "~/Documents/coursera/getting-and-cleaning-data/week4/"
-        setwd(wd)
-        
         file <- "UCI_HAR_Dataset.zip"
         if( !file.exists(file) ) {
                 url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -21,7 +23,8 @@ runAnalysis <- function() {
         }
         
         # Go in sub-directory
-        setwd(paste(wd,"/UCI HAR Dataset/",collapse="",sep=""))
+        oldwd <- getwd()
+        setwd(paste(getwd(),"/UCI HAR Dataset/",collapse="",sep=""))
         
         # Read activities/features files and name columns
         activities <- read.table("activity_labels.txt") %>%
@@ -57,6 +60,9 @@ runAnalysis <- function() {
                 mutate( subject=factor(subject),
                         activity_name=factor(activity_name) ) %>%
                 arrange( subject, activity_name )
+        
+        # Set back wd
+        setwd(oldwd)
         
         # Return it
         data
