@@ -28,8 +28,7 @@
 * There are 2 groups of measurements
   * mean = mean
   * std = standard deviation
-* The measurements are as follows
-* '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+* For each of the above groups, the following measurements are included for the 3 directions (X, Y, Z) 
   * tBodyAcc-XYZ
   * tGravityAcc-XYZ
   * tBodyAccJerk-XYZ
