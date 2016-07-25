@@ -60,8 +60,10 @@ runAnalysis <- function() {
         data
 }
 
-tinyset <- function( set ) {
-        tinyset <- set %>%
+tidyset <- function( set ) {
+        tidyset <- set %>%
                         group_by( subject, activity_name ) %>%
                         summarize_each( funs(mean) )
+        
+        tidyset
 }
